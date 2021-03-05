@@ -1,0 +1,216 @@
+StationID,Name,State,Region
+1611400,Nawiliwili,HI,Hawaii
+1612340,Honolulu,HI,Hawaii
+1612480,Mokuoloe,HI,Hawaii
+1615680,"Kahului, Kahului Harbor",HI,Hawaii
+1617433,Kawaihae,HI,Hawaii
+1617760,"Hilo, Hilo Bay, Kuhio Bay",HI,Hawaii
+1619910,"Sand Island, Midway Islands",AK,Alaska
+8410140,Eastport,ME,Atlantic
+8411060,Cutler Farris Wharf,ME,Atlantic
+8413320,Bar Harbor,ME,Atlantic
+8418150,Portland,ME,Atlantic
+8419317,Wells,ME,Atlantic
+8443970,Boston,MA,Atlantic
+8447386,Fall River,MA,Atlantic
+8447435,"Chatham, Lydia Cove",MA,Atlantic
+8447930,Woods Hole,MA,Atlantic
+8449130,Nantucket Island,MA,Atlantic
+8452660,Newport,RI,Atlantic
+8452944,Conimicut Light,RI,Atlantic
+8454000,Providence,RI,Atlantic
+8454049,Quonset Point,RI,Atlantic
+8461490,New London,CT,Atlantic
+8465705,New Haven,CT,Atlantic
+8467150,Bridgeport,CT,Atlantic
+8510560,Montauk,NY,Atlantic
+8516945,Kings Point,NY,Atlantic
+8518750,The Battery,NY,Atlantic
+8518962,Turkey Point Hudson River NERRS,NY,Atlantic
+8519483,Bergen Point West Reach,NY,Atlantic
+8531680,Sandy Hook,NJ,Atlantic
+8534720,Atlantic City,NJ,Atlantic
+8536110,Cape May,NJ,Atlantic
+8537121,Ship John Shoal,NJ,Atlantic
+8539094,"Burlington, Delaware River",NJ,Atlantic
+8540433,Marcus Hook,PA,Atlantic
+8545240,Philadelphia,PA,Atlantic
+8546252,Bridesburg,PA,Atlantic
+8548989,Newbold,PA,Atlantic
+8551762,Delaware City,DE,Atlantic
+8551910,Reedy Point,DE,Atlantic
+8555889,Brandywine Shoal Light,DE,Atlantic
+8557380,Lewes,DE,Atlantic
+8570283,Ocean City Inlet,MD,Atlantic
+8571421,Bishops Head,MD,Atlantic
+8571892,Cambridge,MD,Atlantic
+8573364,Tolchester Beach,MD,Atlantic
+8573927,Chesapeake City,MD,Atlantic
+8574680,"Baltimore, Fort McHenry, Patapsco River",MD,Atlantic
+8575512,Annapolis,MD,Atlantic
+8577330,Solomons Island,MD,Atlantic
+8594900,Washington,DC,Atlantic
+8631044,Wachapreague,VA,Atlantic
+8632200,Kiptopeke,VA,Atlantic
+8635027,Dahlgren,VA,Atlantic
+8635750,Lewisetta,VA,Atlantic
+8637689,Yorktown USCG Training Center,VA,Atlantic
+8638610,Sewells Point,VA,Atlantic
+8638901,"CBBT, Chesapeake Channel",VA,Atlantic
+8639348,Money Point,VA,Atlantic
+8651370,Duck,NC,Atlantic
+8652587,Oregon Inlet Marina,NC,Atlantic
+8654467,USCG Station Hatteras,NC,Atlantic
+8656483,"Beaufort, Duke Marine Lab",NC,Atlantic
+8658120,Wilmington,NC,Atlantic
+8658163,Wrightsville Beach,NC,Atlantic
+8665530,"Charleston, Cooper River Entrance",SC,Atlantic
+8670870,Fort Pulaski,GA,Atlantic
+8720030,Fernandina Beach,FL,Atlantic
+8720218,Mayport (Bar Pilots Dock),FL,Atlantic
+8720219,Dames Point,FL,Atlantic
+8720245,Jacksonville University,FL,Atlantic
+8721604,"Trident Pier, Port Canaveral",FL,Atlantic
+8722670,"Lake Worth Pier, Atlantic Ocean",FL,Atlantic
+8722956,South Port Everglades,FL,Atlantic
+8723214,"Virginia Key, Biscayne Bay",FL,Atlantic
+8723970,"Vaca Key, Florida Bay",FL,Gulf
+8724580,Key West,FL,Gulf
+8725110,"Naples, Gulf of Mexico",FL,Gulf
+8725520,Fort Myers,FL,Gulf
+8726384,Port Manatee,FL,Gulf
+8726520,"St. Petersburg, Tampa Bay",FL,Gulf
+8726607,Old Port Tampa,FL,Gulf
+8726674,East Bay,FL,Gulf
+8726724,Clearwater Beach,FL,Gulf
+8727520,Cedar Key,FL,Gulf
+8728690,Apalachicola,FL,Gulf
+8729108,Panama City,FL,Gulf
+8729210,Panama City Beach,FL,Gulf
+8729840,Pensacola,FL,Gulf
+8732828,"Weeks Bay, Mobile Bay",AL,Gulf
+8735180,Dauphin Island,AL,Gulf
+8736897,Coast Guard Sector Mobile,AL,Gulf
+8737048,Mobile State Docks,AL,Gulf
+8740166,"Grand Bay NERR, Mississippi Sound",MS,Gulf
+8741533,Pascagoula NOAA Lab,MS,Gulf
+8747437,Bay Waveland Yacht Club,MS,Gulf
+8760721,Pilottown,LA,Gulf
+8760922,"Pilots Station East, S.W. Pass",LA,Gulf
+8761305,Shell Beach,LA,Gulf
+8761724,Grand Isle,LA,Gulf
+8761927,New Canal Station,LA,Gulf
+8761955,Carrollton,LA,Gulf
+8762482,"West Bank 1, Bayou Gauche",LA,Gulf
+8764044,"Berwick, Atchafalaya River",LA,Gulf
+8764227,"LAWMA, Amerada Pass",LA,Gulf
+8764314,"Eugene Island, North of , Gulf of Mexico",LA,Gulf
+8766072,Freshwater Canal Locks,LA,Gulf
+8767816,Lake Charles,LA,Gulf
+8767961,Bulk Terminal,LA,Gulf
+8768094,Calcasieu Pass,LA,Gulf
+8770475,Port Arthur,TX,Gulf
+8770570,Sabine Pass North,TX,Gulf
+8770613,"Morgans Point, Barbours Cut",TX,Gulf
+8770777,Manchester,TX,Gulf
+8770808,High Island,TX,Gulf
+8770822,"Texas Point, Sabine Pass",TX,Gulf
+8770971,Rollover Pass,TX,Gulf
+8771013,"Eagle Point, Galveston Bay",TX,Gulf
+8771341,"Galveston Bay Entrance, North Jetty",TX,Gulf
+8771450,Galveston Pier 21,TX,Gulf
+8771486,Galveston Railroad Bridge,TX,Gulf
+8771972,San Luis Pass,TX,Gulf
+8772447,Freeport,TX,Gulf
+8772471,"Freeport SPIP, Freeport Harbor",TX,Gulf
+8772985,Sargent,TX,Gulf
+8773037,Seadrift,TX,Gulf
+8773146,Matagorda City,TX,Gulf
+8773259,Port Lavaca,TX,Gulf
+8773701,Port O’Connor,TX,Gulf
+8773767,Matagorda Bay Entrance Channel,TX,Gulf
+8774230,Aransas Wildlife Refuge,TX,Gulf
+8774770,Rockport,TX,Gulf
+8775237,Port Aransas,TX,Gulf
+8775241,"Aransas, Aransas Pass",TX,Gulf
+8775244,Nueces Bay,TX,Gulf
+8775296,"USS Lexington, Corpus Christi Bay",TX,Gulf
+8775792,Packery Channel,TX,Gulf
+8775870,"Bob Hall Pier, Corpus Christi",TX,Gulf
+8776139,S. Bird Island,TX,Gulf
+8776604,Baffin Bay,TX,Gulf
+8777812,Rincon Del San Jose,TX,Gulf
+8778490,Port Mansfield,TX,Gulf
+8779280,Realitos Peninsula,TX,Gulf
+8779748,South Padre Island CG Station,TX,Gulf
+8779749,SPI Brazos Santiago,TX,Gulf
+8779770,Port Isabel,TX,Gulf
+9410170,"San Diego, San Diego Bay",CA,Pacific
+9410230,La Jolla,CA,Pacific
+9410660,Los Angeles,CA,Pacific
+9410840,Santa Monica,CA,Pacific
+9412110,Port San Luis,CA,Pacific
+9413450,Monterey,CA,Pacific
+9414290,San Francisco,CA,Pacific
+9414523,Redwood City,CA,Pacific
+9414750,Alameda,CA,Pacific
+9414863,Richmond,CA,Pacific
+9415020,Point Reyes,CA,Pacific
+9415102,Martinez-Amorco Pier,CA,Pacific
+9415144,Port Chicago,CA,Pacific
+9416841,Arena Cove,CA,Pacific
+9418767,North Spit,CA,Pacific
+9419750,Crescent City,CA,Pacific
+9431647,Port Orford,OR,Pacific
+9432780,Charleston,OR,Pacific
+9435380,South Beach,OR,Pacific
+9437540,Garibaldi,OR,Pacific
+9439040,Astoria,OR,Pacific
+9440422,Longview,WA,Pacific
+9440910,Toke Point,WA,Pacific
+9441102,Westport,WA,Pacific
+9442396,"La Push, Quillayute River",WA,Pacific
+9443090,Neah Bay,WA,Pacific
+9444090,Port Angeles,WA,Pacific
+9444900,Port Townsend,WA,Pacific
+9446484,Tacoma,WA,Pacific
+9449419,Cherry Point South Dock,WA,Pacific
+9449424,Cherry Point,WA,Pacific
+9449880,Friday Harbor,WA,Pacific
+9450460,Ketchikan,AK,Alaska
+9451054,Port Alexander,AK,Alaska
+9451600,Sitka,AK,Alaska
+9452210,Juneau,AK,Alaska
+9452400,"Skagway, Taiya Inlet",AK,Alaska
+9452634,Elfin Cove,AK,Alaska
+9453220,"Yakutat, Yakutat Bay",AK,Alaska
+9454050,Cordova,AK,Alaska
+9454240,Valdez,AK,Alaska
+9455090,Seward,AK,Alaska
+9455500,Seldovia,AK,Alaska
+9455760,Nikiski,AK,Alaska
+9455920,Anchorage,AK,Alaska
+9457292,Kodiak Island,AK,Alaska
+9457804,Alitak,AK,Alaska
+9459450,Sand Point,AK,Alaska
+9459881,King Cove,AK,Alaska
+9461380,Adak Island,AK,Alaska
+9461710,Atka,AK,Alaska
+9462620,Unalaska,AK,Alaska
+9464212,"Village Cove, St Paul Island",AK,Alaska
+9468333,Unalakleet,AK,Alaska
+9491094,Red Dog Dock,AK,Alaska
+9497645,Prudhoe Bay,AK,Alaska
+9751364,"Christiansted Harbor, St Croix",USVI,Caribbean
+9751381,"Lameshur Bay, St John",USVI,Caribbean
+9751401,Lime Tree Bay,USVI,Caribbean
+9752235,Culebra,PR,Caribbean
+9752695,"Esperanza, Vieques Island",PR,Caribbean
+9753216,Fajardo,PR,Caribbean
+9754228,Yabucoa Harbor,PR,Caribbean
+9755371,"San Juan, La Puntilla, San Juan Bay",PR,Caribbean
+9757112,Caja de Muertos,PR,Caribbean
+9757809,Arecibo,PR,Caribbean
+9759110,Magueyes Island,PR,Caribbean
+9759394,Mayaguez,PR,Caribbean
+9759938,Mona Island,PR,Caribbean
