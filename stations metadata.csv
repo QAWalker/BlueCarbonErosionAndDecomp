@@ -1,0 +1,172 @@
+id,name,lat,lon,State,Region,ObjName
+8410140,Eastport,44.9046,-66.9829,ME,Atlantic,Eastport.ME
+8411060,Cutler Farris Wharf,44.657,-67.2047,ME,Atlantic,CutlerFarrisWharf.ME
+8413320,Bar Harbor,44.3922,-68.2043,ME,Atlantic,BarHarbor.ME
+8418150,Portland,43.6581,-70.2442,ME,Atlantic,Portland.ME
+8419317,Wells,43.32,-70.5633,ME,Atlantic,Wells.ME
+8443970,Boston,42.3548,-71.0534,MA,Atlantic,Boston.MA
+8447386,Fall River,41.7043,-71.1641,MA,Atlantic,FallRiver.MA
+8447435,"Chatham, Lydia Cove",41.6885,-69.9511,MA,Atlantic,ChathamLydiaCove.MA
+8447930,Woods Hole,41.5236,-70.6711,MA,Atlantic,WoodsHole.MA
+8449130,Nantucket Island,41.2853,-70.0964,MA,Atlantic,NantucketIsland.MA
+8452660,Newport,41.505,-71.3267,RI,Atlantic,Newport.RI
+8452944,Conimicut Light,41.7167,-71.3433,RI,Atlantic,ConimicutLight.RI
+8454000,Providence,41.8071,-71.4012,RI,Atlantic,Providence.RI
+8454049,Quonset Point,41.5868,-71.411,RI,Atlantic,QuonsetPoint.RI
+8461490,New London,41.3614,-72.09,CT,Atlantic,NewLondon.CT
+8465705,New Haven,41.2833,-72.9083,CT,Atlantic,NewHaven.CT
+8467150,Bridgeport,41.1733,-73.1817,CT,Atlantic,Bridgeport.CT
+8510560,Montauk,41.0483,-71.9594,NY,Atlantic,Montauk.NY
+8516945,Kings Point,40.8103,-73.765,NY,Atlantic,KingsPoint.NY
+8518750,The Battery,40.7006,-74.0142,NY,Atlantic,TheBattery.NY
+8518962,Turkey Point Hudson River NERRS,42.0139,-73.9392,NY,Atlantic,TurkeyPointHudsonRiverNERRS.NY
+8519483,Bergen Point West Reach,40.6367,-74.1417,NY,Atlantic,BergenPointWestReach.NY
+8531680,Sandy Hook,40.4669,-74.0094,NJ,Atlantic,SandyHook.NJ
+8534720,Atlantic City,39.355,-74.4183,NJ,Atlantic,AtlanticCity.NJ
+8536110,Cape May,38.9678,-74.9597,NJ,Atlantic,CapeMay.NJ
+8537121,Ship John Shoal,39.305,-75.375,NJ,Atlantic,ShipJohnShoal.NJ
+8539094,"Burlington, Delaware River",40.08,-74.8733,NJ,Atlantic,BurlingtonDelawareRiver.NJ
+8540433,Marcus Hook,39.8117,-75.4094,PA,Atlantic,MarcusHook.PA
+8545240,Philadelphia,39.9333,-75.1417,PA,Atlantic,Philadelphia.PA
+8546252,Bridesburg,39.9833,-75.075,PA,Atlantic,Bridesburg.PA
+8548989,Newbold,40.1373,-74.7519,PA,Atlantic,Newbold.PA
+8551762,Delaware City,39.5817,-75.5883,DE,Atlantic,DelawareCity.DE
+8551910,Reedy Point,39.5583,-75.5733,DE,Atlantic,ReedyPoint.DE
+8555889,Brandywine Shoal Light,38.9867,-75.1133,DE,Atlantic,BrandywineShoalLight.DE
+8557380,Lewes,38.7828,-75.1192,DE,Atlantic,Lewes.DE
+8570283,Ocean City Inlet,38.3283,-75.0917,MD,Atlantic,OceanCityInlet.MD
+8571421,Bishops Head,38.2204,-76.0387,MD,Atlantic,BishopsHead.MD
+8571892,Cambridge,38.5742,-76.0722,MD,Atlantic,Cambridge.MD
+8573364,Tolchester Beach,39.2134,-76.2445,MD,Atlantic,TolchesterBeach.MD
+8573927,Chesapeake City,39.5267,-75.81,MD,Atlantic,ChesapeakeCity.MD
+8574680,"Baltimore, Fort McHenry, Patapsco River",39.2667,-76.5783,MD,Atlantic,BaltimoreFortMcHenryPatapscoRiver.MD
+8575512,Annapolis,38.9833,-76.4816,MD,Atlantic,Annapolis.MD
+8577330,Solomons Island,38.3172,-76.4508,MD,Atlantic,SolomonsIsland.MD
+8594900,Washington,38.8733,-77.0217,DC,Atlantic,Washington.DC
+8631044,Wachapreague,37.6078,-75.6858,VA,Atlantic,Wachapreague.VA
+8632200,Kiptopeke,37.1652,-75.9884,VA,Atlantic,Kiptopeke.VA
+8635027,Dahlgren,38.3197,-77.0366,VA,Atlantic,Dahlgren.VA
+8635750,Lewisetta,37.9954,-76.4646,VA,Atlantic,Lewisetta.VA
+8637689,Yorktown USCG Training Center,37.2265,-76.4788,VA,Atlantic,YorktownUSCGTrainingCenter.VA
+8638610,Sewells Point,36.9467,-76.33,VA,Atlantic,SewellsPoint.VA
+8638901,"CBBT, Chesapeake Channel",37.0329,-76.0833,VA,Atlantic,CBBTChesapeakeChannel.VA
+8639348,Money Point,36.7783,-76.3017,VA,Atlantic,MoneyPoint.VA
+8651370,Duck,36.1833,-75.7467,NC,Atlantic,Duck.NC
+8652587,Oregon Inlet Marina,35.795,-75.5481,NC,Atlantic,OregonInletMarina.NC
+8654467,USCG Station Hatteras,35.2086,-75.7042,NC,Atlantic,USCGStationHatteras.NC
+8656483,"Beaufort, Duke Marine Lab",34.72,-76.67,NC,Atlantic,BeaufortDukeMarineLab.NC
+8658120,Wilmington,34.2275,-77.9536,NC,Atlantic,Wilmington.NC
+8658163,Wrightsville Beach,34.2133,-77.7867,NC,Atlantic,WrightsvilleBeach.NC
+8665530,"Charleston, Cooper River Entrance",32.7808,-79.9236,SC,Atlantic,CharlestonCooperRiverEntrance.SC
+8670870,Fort Pulaski,32.0367,-80.9017,GA,Atlantic,FortPulaski.GA
+8720030,Fernandina Beach,30.6714,-81.4658,FL,Atlantic,FernandinaBeach.FL
+8720218,Mayport (Bar Pilots Dock),30.3982,-81.4279,FL,Atlantic,Mayport(BarPilotsDock).FL
+8720219,Dames Point,30.3867,-81.5583,FL,Atlantic,DamesPoint.FL
+8720245,Jacksonville University,30.3541,-81.6118,FL,Atlantic,JacksonvilleUniversity.FL
+8721604,"Trident Pier, Port Canaveral",28.4158,-80.5931,FL,Atlantic,TridentPierPortCanaveral.FL
+8722670,"Lake Worth Pier, Atlantic Ocean",26.6128,-80.0342,FL,Atlantic,LakeWorthPierAtlanticOcean.FL
+8722956,South Port Everglades,26.0817,-80.1167,FL,Atlantic,SouthPortEverglades.FL
+8723214,"Virginia Key, Biscayne Bay",25.7314,-80.1618,FL,Atlantic,VirginiaKeyBiscayneBay.FL
+8723970,"Vaca Key, Florida Bay",24.711,-81.1065,FL,Gulf,VacaKeyFloridaBay.FL
+8724580,Key West,24.5508,-81.8081,FL,Gulf,KeyWest.FL
+8725110,"Naples, Gulf of Mexico",26.1317,-81.8075,FL,Gulf,NaplesGulfofMexico.FL
+8725520,Fort Myers,26.6477,-81.8712,FL,Gulf,FortMyers.FL
+8726384,Port Manatee,27.6383,-82.5625,FL,Gulf,PortManatee.FL
+8726520,"St. Petersburg, Tampa Bay",27.7606,-82.6269,FL,Gulf,St.PetersburgTampaBay.FL
+8726607,Old Port Tampa,27.8578,-82.5528,FL,Gulf,OldPortTampa.FL
+8726674,East Bay,27.9231,-82.4214,FL,Gulf,EastBay.FL
+8726724,Clearwater Beach,27.9783,-82.8317,FL,Gulf,ClearwaterBeach.FL
+8727520,Cedar Key,29.135,-83.0317,FL,Gulf,CedarKey.FL
+8728690,Apalachicola,29.7267,-84.9817,FL,Gulf,Apalachicola.FL
+8729108,Panama City,30.1523,-85.6669,FL,Gulf,PanamaCity.FL
+8729210,Panama City Beach,30.2133,-85.8783,FL,Gulf,PanamaCityBeach.FL
+8729840,Pensacola,30.4044,-87.2112,FL,Gulf,Pensacola.FL
+8732828,"Weeks Bay, Mobile Bay",30.4169,-87.8254,AL,Gulf,WeeksBayMobileBay.AL
+8735180,Dauphin Island,30.25,-88.075,AL,Gulf,DauphinIsland.AL
+8736897,Coast Guard Sector Mobile,30.6483,-88.0583,AL,Gulf,CoastGuardSectorMobile.AL
+8737048,Mobile State Docks,30.7083,-88.0433,AL,Gulf,MobileStateDocks.AL
+8740166,"Grand Bay NERR, Mississippi Sound",30.4132,-88.4029,MS,Gulf,GrandBayNERRMississippiSound.MS
+8741533,Pascagoula NOAA Lab,30.3678,-88.5631,MS,Gulf,PascagoulaNOAALab.MS
+8747437,Bay Waveland Yacht Club,30.325,-89.325,MS,Gulf,BayWavelandYachtClub.MS
+8760721,Pilottown,29.1783,-89.2583,LA,Gulf,Pilottown.LA
+8760922,"Pilots Station East, S.W. Pass",28.9322,-89.4075,LA,Gulf,PilotsStationEastS.W.Pass.LA
+8761305,Shell Beach,29.8681,-89.6732,LA,Gulf,ShellBeach.LA
+8761724,Grand Isle,29.2633,-89.9567,LA,Gulf,GrandIsle.LA
+8761927,New Canal Station,30.0272,-90.1133,LA,Gulf,NewCanalStation.LA
+8761955,Carrollton,29.9329,-90.1355,LA,Gulf,Carrollton.LA
+8762482,"West Bank 1, Bayou Gauche",29.7886,-90.4203,LA,Gulf,WestBank1BayouGauche.LA
+8764044,"Berwick, Atchafalaya River",29.6675,-91.2376,LA,Gulf,BerwickAtchafalayaRiver.LA
+8764227,"LAWMA, Amerada Pass",29.4496,-91.3381,LA,Gulf,LAWMAAmeradaPass.LA
+8764314,"Eugene Island, North of , Gulf of Mexico",29.3675,-91.3839,LA,Gulf,EugeneIslandNorthofGulfofMexico.LA
+8766072,Freshwater Canal Locks,29.5517,-92.3052,LA,Gulf,FreshwaterCanalLocks.LA
+8767816,Lake Charles,30.2236,-93.2217,LA,Gulf,LakeCharles.LA
+8767961,Bulk Terminal,30.1902,-93.3008,LA,Gulf,BulkTerminal.LA
+8768094,Calcasieu Pass,29.7682,-93.3429,LA,Gulf,CalcasieuPass.LA
+8770475,Port Arthur,29.8671,-93.931,TX,Gulf,PortArthur.TX
+8770570,Sabine Pass North,29.7284,-93.8701,TX,Gulf,SabinePassNorth.TX
+8770613,"Morgans Point, Barbours Cut",29.6817,-94.985,TX,Gulf,MorgansPointBarboursCut.TX
+8770777,Manchester,29.7262,-95.2658,TX,Gulf,Manchester.TX
+8770808,High Island,29.5947,-94.3903,TX,Gulf,HighIsland.TX
+8770822,"Texas Point, Sabine Pass",29.6894,-93.8419,TX,Gulf,TexasPointSabinePass.TX
+8770971,Rollover Pass,29.5156,-94.5106,TX,Gulf,RolloverPass.TX
+8771013,"Eagle Point, Galveston Bay",29.48,-94.9183,TX,Gulf,EaglePointGalvestonBay.TX
+8771341,"Galveston Bay Entrance, North Jetty",29.3573,-94.7248,TX,Gulf,GalvestonBayEntranceNorthJetty.TX
+8771450,Galveston Pier 21,29.31,-94.7933,TX,Gulf,GalvestonPier21.TX
+8771486,Galveston Railroad Bridge,29.3026,-94.8971,TX,Gulf,GalvestonRailroadBridge.TX
+8771972,San Luis Pass,29.081,-95.1313,TX,Gulf,SanLuisPass.TX
+8772447,Freeport,28.9433,-95.3025,TX,Gulf,Freeport.TX
+8772471,"Freeport SPIP, Freeport Harbor",28.9357,-95.2942,TX,Gulf,FreeportSPIPFreeportHarbor.TX
+8772985,Sargent,28.7714,-95.6172,TX,Gulf,Sargent.TX
+8773037,Seadrift,28.4069,-96.7124,TX,Gulf,Seadrift.TX
+8773146,Matagorda City,28.7101,-95.914,TX,Gulf,MatagordaCity.TX
+8773259,Port Lavaca,28.6406,-96.6098,TX,Gulf,PortLavaca.TX
+8773701,Port O'Connor,28.4459,-96.3956,NA,NA,NA
+8773767,Matagorda Bay Entrance Channel,28.4269,-96.3301,TX,Gulf,MatagordaBayEntranceChannel.TX
+8774230,Aransas Wildlife Refuge,28.2283,-96.795,TX,Gulf,AransasWildlifeRefuge.TX
+8774770,Rockport,28.0217,-97.0467,TX,Gulf,Rockport.TX
+8775237,Port Aransas,27.8397,-97.0725,TX,Gulf,PortAransas.TX
+8775241,"Aransas, Aransas Pass",27.8366,-97.0391,TX,Gulf,AransasAransasPass.TX
+8775244,Nueces Bay,27.8328,-97.4859,TX,Gulf,NuecesBay.TX
+8775296,"USS Lexington, Corpus Christi Bay",27.8149,-97.3892,TX,Gulf,USSLexingtonCorpusChristiBay.TX
+8775792,Packery Channel,27.6333,-97.2367,TX,Gulf,PackeryChannel.TX
+8775870,"Bob Hall Pier, Corpus Christi",27.58,-97.2167,TX,Gulf,BobHallPierCorpusChristi.TX
+8776139,S. Bird Island,27.4844,-97.3181,TX,Gulf,S.BirdIsland.TX
+8776604,Baffin Bay,27.297,-97.4052,TX,Gulf,BaffinBay.TX
+8777812,Rincon Del San Jose,26.8012,-97.4706,TX,Gulf,RinconDelSanJose.TX
+8778490,Port Mansfield,26.5576,-97.4257,TX,Gulf,PortMansfield.TX
+8779280,Realitos Peninsula,26.2624,-97.2853,TX,Gulf,RealitosPeninsula.TX
+8779748,South Padre Island CG Station,26.0731,-97.1675,TX,Gulf,SouthPadreIslandCGStation.TX
+8779749,SPI Brazos Santiago,26.0674,-97.1548,TX,Gulf,SPIBrazosSantiago.TX
+8779770,Port Isabel,26.0612,-97.2155,TX,Gulf,PortIsabel.TX
+9410170,"San Diego, San Diego Bay",32.7142,-117.1736,CA,Pacific,SanDiegoSanDiegoBay.CA
+9410230,La Jolla,32.8669,-117.2571,CA,Pacific,LaJolla.CA
+9410660,Los Angeles,33.7199,-118.2729,CA,Pacific,LosAngeles.CA
+9410840,Santa Monica,34.0083,-118.5,CA,Pacific,SantaMonica.CA
+9412110,Port San Luis,35.1688,-120.7542,CA,Pacific,PortSanLuis.CA
+9413450,Monterey,36.605,-121.8881,CA,Pacific,Monterey.CA
+9414290,San Francisco,37.8063,-122.4659,CA,Pacific,SanFrancisco.CA
+9414523,Redwood City,37.5067,-122.21,CA,Pacific,RedwoodCity.CA
+9414750,Alameda,37.7717,-122.3,CA,Pacific,Alameda.CA
+9414863,Richmond,37.923,-122.4096,CA,Pacific,Richmond.CA
+9415020,Point Reyes,37.9961,-122.9767,CA,Pacific,PointReyes.CA
+9415102,Martinez-Amorco Pier,38.0346,-122.1252,CA,Pacific,Martinez-AmorcoPier.CA
+9415144,Port Chicago,38.056,-122.0395,CA,Pacific,PortChicago.CA
+9416841,Arena Cove,38.9146,-123.7111,CA,Pacific,ArenaCove.CA
+9418767,North Spit,40.7663,-124.2172,CA,Pacific,NorthSpit.CA
+9419750,Crescent City,41.745,-124.183,CA,Pacific,CrescentCity.CA
+9431647,Port Orford,42.739,-124.4983,OR,Pacific,PortOrford.OR
+9432780,Charleston,43.345,-124.322,OR,Pacific,Charleston.OR
+9435380,South Beach,44.625,-124.043,OR,Pacific,SouthBeach.OR
+9437540,Garibaldi,45.5545,-123.9189,OR,Pacific,Garibaldi.OR
+9439040,Astoria,46.2073,-123.7683,OR,Pacific,Astoria.OR
+9440422,Longview,46.1061,-122.9542,WA,Pacific,Longview.WA
+9440910,Toke Point,46.7075,-123.9669,WA,Pacific,TokePoint.WA
+9441102,Westport,46.9043,-124.1051,WA,Pacific,Westport.WA
+9442396,"La Push, Quillayute River",47.9133,-124.6369,WA,Pacific,LaPushQuillayuteRiver.WA
+9443090,Neah Bay,48.3703,-124.6019,WA,Pacific,NeahBay.WA
+9444090,Port Angeles,48.125,-123.44,WA,Pacific,PortAngeles.WA
+9444900,Port Townsend,48.1129,-122.7595,WA,Pacific,PortTownsend.WA
+9446484,Tacoma,47.2667,-122.4133,WA,Pacific,Tacoma.WA
+9449419,Cherry Point South Dock,48.86,-122.757,WA,Pacific,CherryPointSouthDock.WA
+9449424,Cherry Point,48.8633,-122.758,WA,Pacific,CherryPoint.WA
+9449880,Friday Harbor,48.5453,-123.0129,WA,Pacific,FridayHarbor.WA
