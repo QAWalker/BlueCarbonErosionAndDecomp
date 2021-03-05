@@ -1,0 +1,26 @@
+Region,Abb,State,Hard sheltered shore (km),Sheltered shore (km),Hard sheltered shore (%),Hard open shore (km),Open shore (km),Hard open shore (km),Hard shore (km),Total shore (km),Hard shore (%),Marsh shore (km),Hard marsh shore (km),Hard marsh shore (%)
+Atlantic,CT,Connecticut,477,1907,25,0,0,,477,1907,25,897,37,4.1
+Atlantic,DE,Delaware,287,2163,13,5,45,11,292,2208,13,1565,3,0.2
+Atlantic,DC,DC,29,54,53,0,0,,29,54,53,0,0,0
+Atlantic,FL,Florida,2694,11365,24,58,628,9,2752,11992,23,3995,33,0.8
+Atlantic,GA,Georgia,92,6340,1,14,158,9,106,6498,2,5844,24,0.4
+Atlantic,ME,Maine,366,6103,6,136,2258,6,502,8362,6,0,0,0
+Atlantic,MD,Maryland,2032,12467,16,1,52,2,2033,12519,16,8550,148,1.7
+Atlantic,MA,Massachusetts,568,3408,17,148,875,17,715,4283,17,2042,17,0.8
+Atlantic,NH,New Hampshire,24,319,8,19,38,49,43,357,12,263,17,6.6
+Atlantic,NJ,New Jersey,1339,7244,18,41,229,18,1380,7473,18,5328,31,0.6
+Atlantic,NY,New York,366,6103,6,136,2258,6,502,8362,6,2058,44,2.1
+Atlantic,NC,North Carolina,1071,12291,9,3,514,1,1074,12805,8,7579,40,0.5
+Atlantic,PA,Pennsylvania,168,468,36,0,0,,168,468,36,44,0,0
+Atlantic,RI,Rhode Island,234,938,25,21,149,14,255,1087,23,504,28,5.6
+Atlantic,SC,South Carolina,144,9615,2,32,308,11,177,9923,2,7515,11,0.1
+Atlantic,VA,Virginia,1392,14364,10,13,192,7,1404,14556,10,9535,74,0.8
+Gulf,AL,Alabama,,,,,,,356,2606,14,1169,12,1
+Gulf,FL,Florida,,,,,,,4427,26383,17,7913,38,0.5
+Gulf,LA,Louisiana,,,,,,,353,3305,11,1551,6,0.4
+Gulf,MS,Mississippi,,,,,,,367,3033,12,1973,28,1.4
+Gulf,TX,Texas,,,,,,,1886,9612,20,4332,240,5.5
+Pacific,CA,California,1009,3602,28,335,2680,12,1344,6282,21,2135,50,2.3
+Pacific,OR,Oregon,151,2659,6,8,702,1,159,3361,5,1274,0,0
+Pacific,WA,Washington,1022,5765,18,5,327,1,1027,6092,17,1388,5,0.4
+Gulf,LA,Lousiana (c. 1986),,,,,,,,,,73745,,
