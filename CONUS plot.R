@@ -26,6 +26,7 @@ theme_map <- function(...) {
 library("rnaturalearth")
 # install.packages("rnaturalearthdata")  
 library("rnaturalearthdata")
+# devtools::install_github("ropensci/rnaturalearthhires")
 # install.packages("rnaturalearthhires", repos = "http://packages.ropensci.org", type = "source")
 library(rnaturalearthhires)
 # install.packages("rgeos")
@@ -36,7 +37,6 @@ library(sf)
 library(ggrepel) 
 # install.packages("ggstar")
 # library(ggstar)
-
 # create datasets for the background map
 world <- ne_countries(scale = "medium", returnclass = "sf")
 states <- ne_states(country = "united states of america", returnclass = "sf")
