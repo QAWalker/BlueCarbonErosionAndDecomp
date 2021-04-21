@@ -2,9 +2,14 @@
 # N.D. McTigue, Q.A. Walker, and C.A. Currin 2021
 # Refining estimates of greenhouse gas emissions from salt marsh “blue carbon” erosion and decomposition
 # email: quentin.walker@noaa.gov, mctigue@utexas.edu
-rm(list = ls())
+#####
 
-##### this script reads in gas concentration data from the GGA and converts it to moles of gas 
+## Run this sript first ##
+
+# this script reads in raw data from our decomposition/incubation experiment, ##### 
+# converts it to moles of gas and moles of carbon,
+# and calculates the mean amount decomposed for each treatment
+
 library(tidyverse)
 
 # Read in the initial Carbon content of the sediment pre-incubation
@@ -16,8 +21,6 @@ GGATechSpecs <-
              vol.GGA = 0.35258189116719, #volume of air in the GGA
              vol.total = 0.967581891167191, #volume of the incubation bottle + GGA system
              temp.K = 300.85) #temperature 27.7 C in Kelvin
-
-# GGATechSpecs$vol.total <- (GGATechSpecs$vol.HS + GGATechSpecs$vol.GGA)
 
 # Read in the gas concentration data from the incubation experimentand get all the data into the correct format
 # for both CO2 and CH4:
