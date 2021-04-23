@@ -4,7 +4,8 @@
 # email: quentin.walker@noaa.gov, mctigue@utexas.edu
 #####
 
-## Run this sript second ##
+##### Run this sript second #####
+# this script assumes that output from DecompExpt.R is in the global environment
 
 ##### Calculate Temperature Sensitivity #####
 # This script takes the summarized decomp expt data and calculates temp sensitivity 

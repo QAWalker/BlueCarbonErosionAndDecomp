@@ -5,6 +5,7 @@
 #####
 
 ## Run this sript first ##
+# this script assumes that output from DecompExpt.R is in the global environment 
 
 # this script reads in raw data from our decomposition/incubation experiment, ##### 
 # converts it to moles of gas and moles of carbon,

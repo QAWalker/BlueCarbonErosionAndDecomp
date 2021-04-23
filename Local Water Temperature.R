@@ -1,7 +1,17 @@
-rm(list = ls())
+#####
+# N.D. McTigue, Q.A. Walker, and C.A. Currin 2021
+# Refining estimates of greenhouse gas emissions from salt marsh “blue carbon” erosion and decomposition
+# email: quentin.walker@noaa.gov, mctigue@utexas.edu
+#####
+
+##### Run this sript third #####
+
+# this script reads in raw temperature data from a YSI near the coring location, ##### 
+# and calculates the decomposition that would occur if sediment were incubated at those temperatures for a year
+
+
 library(tidyverse)
 library(lubridate)
-
 
 ## read in data
 tempData <- read.csv(file.path(getwd(), "/MHBTEMP2008-2016.csv"))
@@ -12,10 +22,6 @@ tempData <- tempData %>%
          temp = as.numeric(temp), ## Change temp from a character to a numerical
          temp = round(temp, 0)) %>% ## Round all temp data to the ones place
   filter(!is.na(temp))
-
-## print to console a table with the number of readings each year
-gt(as.data.frame(table(year(tempData$time))))
-
 
 ## Create a df to store each month of the sampling period and how many readings were made in that month
 readingCounts <- data.frame(table(month(tempData$time), year(tempData$time)))
@@ -299,8 +305,8 @@ Amod
 
 totalDecompMHB$Mean <- rowMeans(totalDecompMHB, na.rm = T)
 totalDecompMHB$sd <- c(sd(totalDecompMHB[1,topYears], na.rm = T), sd(totalDecompMHB[2,topYears], na.rm = T))
-write.csv(x = totalDecompMHB, file = "R:/DCERP/DCERP2/Final Report 2017/Decomposition CW-4/totalDecompMHB.csv",row.names = T)
-write.csv(x = totalDecompMHB, file = "R:/DCERP/Carbon Inventory/Decomp Expts/Creek Temp/totalDecompMHB.csv" ,row.names = T)
-write.csv(x = readingCounts, file = "R:/DCERP/Carbon Inventory/Decomp Expts/Creek Temp/readingCounts.csv" ,row.names = F)
-write.csv(x = tempcountMHB, file = "R:/DCERP/Carbon Inventory/Decomp Expts/Creek Temp/tempcountMHB.csv" ,row.names = F)
-write.csv(x = tempData, file = "R:/DCERP/Carbon Inventory/Decomp Expts/Creek Temp/tempData.csv" ,row.names = F)
+
+# write.csv(x = totalDecompMHB, file = "totalDecompMHB.csv",row.names = T)
+# write.csv(x = readingCounts, file = "readingCounts.csv" ,row.names = F)
+# write.csv(x = tempcountMHB, file = "tempcountMHB.csv" ,row.names = F)
+# write.csv(x = tempData, file = "tempData.csv" ,row.names = F)
