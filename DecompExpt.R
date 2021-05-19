@@ -4,8 +4,7 @@
 # email: quentin.walker@noaa.gov, mctigue@utexas.edu
 #####
 
-## Run this sript first ##
-# this script assumes that output from DecompExpt.R is in the global environment 
+##### Run this sript first #####
 
 # this script reads in raw data from our decomposition/incubation experiment, ##### 
 # converts it to moles of gas and moles of carbon,
@@ -25,9 +24,9 @@ GGATechSpecs <-
 
 # Read in the gas concentration data from the incubation experimentand get all the data into the correct format
 # for both CO2 and CH4:
-# CXX.sys.ppm.p - the concentration of gas in the GGA + incubation bottle system at the PRIOR READING
-# CXX.sys.ppm - the concentration of gas in the GGA + incubation bottle system 
-# CXX.air.ppm the concentration of gas in the GGA prior to connecting the incubation bottle  
+# CXX.sys.ppm.p = the concentration of gas in the GGA + incubation bottle system at the PRIOR READING
+# CXX.sys.ppm = the concentration of gas in the GGA + incubation bottle system 
+# CXX.air.ppm = the concentration of gas in the GGA prior to connecting the incubation bottle  
 decomp.data <- read.csv(file.path(getwd(), "GGA_data.csv")) %>% 
   select("Date", "Time", "Time.Point", "day", "ElapsedDays",
          "Bottle", "Treatment", "Depth", "Rep",
@@ -90,3 +89,21 @@ decomp.summary <- decomp.data %>%
             ci = se * qt(0.95/2 + .5, n-1)) %>% 
   ungroup() %>% 
   rename(PercentCRespired = mean)
+
+# Calculate the rate of decomposition on each day of the experiment by looking at total C respired/days
+# first the rate in each bottle
+decompRate <- decomp.data %>% 
+  group_by(day, Depth, Treatment, Rep) %>% 
+  summarize(d = day, 
+            slope = (PercentCRespired/day)) %>% 
+  ungroup()
+
+# the mean rate for each depth and treatment group
+decompRate.summary <- decompRate %>% 
+  group_by(day, Depth, Treatment) %>% 
+  summarise(meanslope = mean(slope, na.rm = T), 
+            sd = sd(slope, na.rm = T), 
+            n = n(),
+            se = sd/sqrt(n)) %>% 
+  rename(slope = meanslope) %>% 
+  ungroup()
