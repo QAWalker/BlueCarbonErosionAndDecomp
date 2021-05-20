@@ -4,24 +4,24 @@
 # email: quentin.walker@noaa.gov, mctigue@utexas.edu
 #####
 
-##### Run this sript second #####
+##### Run this script second #####
 # this script assumes that output from DecompExpt.R is in the global environment
 
-##### Calculate Temperature Sensitivity #####
 # This script takes the summarized decomp expt data and calculates temp sensitivity 
 # for the shallow and deep depth horizons
 # temperature sensitivity is measured with traditional Q10 and Q10q
 
+##### Calculate Temperature Sensitivity #####
 # load required packages
 library(reshape2)
 
-# load in function to propogate error
+# load in function to propagate error
 source(file.path(getwd(),"mutate_with_error.R"))
 
 # Function that calculates the time where we estimate each group of bottles crossed the threshold
 TimeAtGivenPortion <- function(Portion, BeforeXY, AfterXY){
   m = (AfterXY[2]-BeforeXY[2])/(AfterXY[1]-BeforeXY[1]) #calculate slope (rise over run)
-  b = AfterXY[2]-m*AfterXY[1] #calculate the intercept by substituing the calculated slope into y=mx+b
+  b = AfterXY[2]-m*AfterXY[1] #calculate the intercept by substituting the calculated slope into y=mx+b
   Time = (Portion - b)/m #calculate the time the linear model intercepts the threshold value
   return(Time) #return Time
 }
