@@ -4,7 +4,7 @@
 # email: quentin.walker@noaa.gov, mctigue@utexas.edu
 #####
 
-## Run this script sixth ##
+## This script plots the CONUS decomposition data ##
 # This script creates a map plot of the results from "Calculate Nationwide Decomposition.R"
 
 # Plot a map of COOPS water temperature stations and the calculated annual loss of C at each ####

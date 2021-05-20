@@ -4,7 +4,7 @@
 # email: quentin.walker@noaa.gov, mctigue@utexas.edu
 #####
 
-##### Run this sript third #####
+##### Run this script third #####
 
 # this script reads in raw temperature data from a YSI near the coring location, ##### 
 # and calculates the decomposition that would occur if sediment were incubated at those temperatures for a year
@@ -12,11 +12,11 @@
 library(tidyverse)
 library(lubridate)
 
-# load in function to propogate error
+# load in function to propagate error
 source(file.path(getwd(),"mutate_with_error.R"))
 
 ## read in data
-tempData <- read.csv(file.path(getwd(), "/MHBTEMP2008-2016.csv")) %>% 
+tempData <- read.csv(file.path(getwd(), 'data', "MHBTEMP2008-2016.csv")) %>% 
   rename(time = start_datetime, temp = result_value) %>% # rename cols
   mutate(time = mdy_hm(time, tz = "est"), ## Change time from a character to a POSIXct
          temp = as.numeric(temp), ## Change temp from a character to a numerical
@@ -62,19 +62,6 @@ for(i in names(goodYears)){
   for(j in min(as.numeric(as.character(x$Var1))):max(as.numeric(as.character(x$Var1)))){
     tempcountMHB[tempcountMHB$temp == j, i] <- x$Freq[x$Var1==j]
   }
-}
-
-## loop though each year and save a histogram of the data
-for(i in names(goodYears)){
-  ggplot(select(tempcountMHB, temp, count = i), aes(temp, count))+
-    geom_col()+
-    scale_y_continuous(limits = c(0,10000))+
-    scale_x_continuous(limits = c(0, 35), breaks = seq(-10, 50, by = 10))+
-    labs(title = paste("year starting in", i), y = "Count of Six Minute Measurements", 
-         x = "Temperature (C)")+
-    theme_bw()
-   
-  ggsave(paste0(getwd(), "/plots/", i, ".png"), width = 6, height = 4, units = "in", dpi = 330)
 }
 
 #### activation energy and total decomposition ####

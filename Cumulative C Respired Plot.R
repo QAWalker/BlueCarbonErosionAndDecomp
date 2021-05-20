@@ -4,6 +4,8 @@
 # email: quentin.walker@noaa.gov, mctigue@utexas.edu
 #####
 
+## This script plots the data from the incubation experiments##
+
 decomp.summary %>% 
   mutate(Depth = ifelse(Depth == "M", "Deep", "Shallow"),
          Treatment = ifelse(Treatment == "IB 20", "20° C", "30° C")) %>% 

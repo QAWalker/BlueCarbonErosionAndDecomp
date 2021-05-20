@@ -4,11 +4,12 @@
 # email: quentin.walker@noaa.gov, mctigue@utexas.edu
 #####
 
-## Run this script fifth ##
+## Run this script fourth ##
+
 # *** this script is designed to be run with the water temperature data already downloaded ***
 # if you do not have the water temperature files saved run the "Download and save water temp data.R" script (warning that script takes a while to run)
 # .csv files for water temperature are also available for download from the github for this project
-# @ https://github.com/QAWalker/BlueCarbonErosionAndDecomp/tree/main/Water%20Temp%20Data
+# @ https://github.com/QAWalker/BlueCarbonErosionAndDecomp/tree/main/data/Water%20Temp%20Data
 
 # This script takes the downloaded data from NOAA CO-OPS water temperature stations and determines 
 # the amount of decomposition that would occur at each station in a year
@@ -21,14 +22,14 @@ source(file.path(getwd(),"mutate_with_error.R"))
 
 #### Read in all the data ####
 # Load the station list
-idlist <- read.csv(paste0(getwd(), "/coops-activewatertempstations.csv"), stringsAsFactors = F) %>% 
+idlist <- read.csv(file.path(getwd(), "data", "coops-activewatertempstations.csv"), stringsAsFactors = F) %>% 
   mutate(ObjName = gsub(" ", "",.$Name, fixed =T)) %>% 
   mutate(ObjName = gsub(",", "",.$ObjName, fixed =T),
          ObjName = paste(ObjName, State, sep = ".")) %>% 
   filter(Region %in% c("Atlantic", "Gulf", "Pacific"))
 
 # Load the metadata
-stationmetadata <- read.csv(paste0(getwd(), "/stations metadata.csv")) %>% 
+stationmetadata <- read.csv(file.path(getwd(), "data", "stations metadata.csv")) %>% 
   filter(!is.na(State))
 
 # load the previously downloaded water temperature data
@@ -36,7 +37,7 @@ WTlist <- lapply(
   idlist$ObjName,
   function(on){
     tryCatch({
-      read.csv(paste0(getwd(), "/Water Temp Data/", on,".csv"), stringsAsFactors = F) %>% 
+      read.csv(file.path(getwd(), "data", "Water Temp Data", paste0(on,".csv")), stringsAsFactors = F) %>% 
         as_tibble() %>% 
         mutate(t = ymd_hms(t))
     }, error = function(e){
@@ -242,7 +243,8 @@ shorelinelengths <- read.csv(paste0(getwd(), "/Gittman 2015.csv")) %>%
   select('Region', "State" = 'Abb', "MarshShore" = "Marsh.shore..km.") 
 
 # See manuscript for details on why we use this estimate for Louisiana 
-# it is from the 2014 Louisiana Environmental Sensitivity Index (ESI) file (https://response.restoration.noaa.gov/esi_download#Louisiana), in particular, the ESIL layer (www.fisheries.noaa.gov/inport/item/53935).
+# it is from the 2014 Louisiana Environmental Sensitivity Index (ESI) file 
+# (https://response.restoration.noaa.gov/esi_download#Louisiana), in particular, the ESIL layer (www.fisheries.noaa.gov/inport/item/53935).
 shorelinelengths$MarshShore[shorelinelengths$State=="LA"] = 66459
 shorelinelengths <- distinct(shorelinelengths)
 
@@ -497,7 +499,7 @@ if(needtosave)  {
            "Deep Sed C Annual Decomp (mol C/mol C)" = "totalDecomp.deep", "Deep Sed C Annual Decomp SD (mol C/mol C)" = "sdDecomp.deep",
            "Shallow Sed C Annual Decomp (mol C/mol C)" = "totalDecomp.shallow", "Shallow Sed C Annual Decomp SD (mol C/mol C)" = "sdDecomp.shallow",
            ) %>% 
-    write.csv(paste0(getwd(), "/results/station metadata and decomp.csv"), row.names = F, na = "")
+    write.csv(paste0(getwd(), "/data/results/station metadata and decomp.csv"), row.names = F, na = "")
   
   write.csv(tempcount, paste0(getwd(), "/results/Temp Freq table.csv"), row.names = F, na = "")
   
@@ -506,7 +508,7 @@ if(needtosave)  {
     select("Region", "State", "n stations" = "n", 
            "Mean Deep Sed Annual Decomp (mol C/mol C)" = "meanDecomp.deep", "SD Deep Sed Annual Decomp (mol C/mol C)" = "dDecomp.deep",
            "Mean Shallow Sed Annual Decomp (mol C/mol C)" = "meanDecomp.shallow", "SD Shallow Sed Annual Decomp SD (mol C/mol C)" = "dDecomp.shallow",) %>% 
-    write.csv(paste0(getwd(), "/results/state decomp summary.csv"), row.names = F, na = "")
+    write.csv(paste0(getwd(), "/data/results/state decomp summary.csv"), row.names = F, na = "")
   
   statedecomp %>% 
     # give the results names that are human readable with units
@@ -525,7 +527,7 @@ if(needtosave)  {
            "Eroded Carbon Decomposed Deep Bank & Large Erosion (kg/yr)" = "Decomp.LargeTall", "Eroded Carbon Decomposed Deep Bank & Large Erosion SD (kg/yr)" = "dDecomp.LargeTall",
            "Eroded Carbon Decomposed Shallow Bank & Small Erosion (kg/yr)" = "Decomp.SmallShort", "Eroded Carbon Decomposed Shallow Bank & Small Erosion SD (kg/yr)" = "dDecomp.SmallShort",
            "Eroded Carbon Decomposed Deep Bank & Small Erosion (kg/yr)" = "Decomp.SmallTall", "Eroded Carbon Decomposed Deep Bank & Small Erosion SD (kg/yr)" = "dDecomp.SmallTall") %>% 
-    write.csv(paste0(getwd(), "/results/state decomp and erosion summary.csv"), row.names = F, na = "")
+    write.csv(paste0(getwd(), "/data/results/state decomp and erosion summary.csv"), row.names = F, na = "")
   
   regiondecomp %>% 
     # give the results names that are human readable with units
@@ -542,7 +544,7 @@ if(needtosave)  {
            "Eroded Carbon Decomposed Deep Bank & Large Erosion (kg/yr)" = "Decomp.LargeTall", "Eroded Carbon Decomposed Deep Bank & Large Erosion SD (kg/yr)" = "dDecomp.LargeTall",
            "Eroded Carbon Decomposed Shallow Bank & Small Erosion (kg/yr)" = "Decomp.SmallShort", "Eroded Carbon Decomposed Shallow Bank & Small Erosion SD (kg/yr)" = "dDecomp.SmallShort",
            "Eroded Carbon Decomposed Deep Bank & Small Erosion (kg/yr)" = "Decomp.SmallTall", "Eroded Carbon Decomposed Deep Bank & Small Erosion SD (kg/yr)" = "dDecomp.SmallTall") %>% 
-    write.csv(paste0(getwd(), "/results/regional decomp and erosion summary.csv"), row.names = F, na = "")
+    write.csv(paste0(getwd(), "/data/results/regional decomp and erosion summary.csv"), row.names = F, na = "")
   
   nationaldecomp %>% 
     # give the results names that are human readable with units
@@ -560,9 +562,9 @@ if(needtosave)  {
            "Eroded Carbon Decomposed Deep Bank & Large Erosion (kg/yr)" = "Decomp.LargeTall", "Eroded Carbon Decomposed Deep Bank & Large Erosion SD (kg/yr)" = "dDecomp.LargeTall",
            "Eroded Carbon Decomposed Shallow Bank & Small Erosion (kg/yr)" = "Decomp.SmallShort", "Eroded Carbon Decomposed Shallow Bank & Small Erosion SD (kg/yr)" = "dDecomp.SmallShort",
            "Eroded Carbon Decomposed Deep Bank & Small Erosion (kg/yr)" = "Decomp.SmallTall", "Eroded Carbon Decomposed Deep Bank & Small Erosion SD (kg/yr)" = "dDecomp.SmallTall") %>% 
-    write.csv(paste0(getwd(), "/results/national decomp and erosion summary.csv"), row.names = F, na = "")
+    write.csv(paste0(getwd(), "/data/results/national decomp and erosion summary.csv"), row.names = F, na = "")
   
   ErosionAndDecompSummary %>% 
     # mutate(State = ifelse(State=="LA"& MarshShore >= 70000, "LA 1986", State)) %>% 
-    write.csv(paste0(getwd(), "/results/decomp and erosion summary.csv"), row.names = F, na = "")
+    write.csv(paste0(getwd(), "/data/results/decomp and erosion summary.csv"), row.names = F, na = "")
 }

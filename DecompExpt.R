@@ -13,7 +13,7 @@
 library(tidyverse)
 
 # Read in the initial Carbon content of the sediment pre-incubation
-SampleCarbon <- read.csv(file.path(getwd(), 'Sample Carbon Content.csv'))
+SampleCarbon <- read.csv(file.path(getwd(), 'data', 'Sample Carbon Content.csv'))
 
 # read in the technical specifications of the LGR GGA
 GGATechSpecs <- 
@@ -27,7 +27,7 @@ GGATechSpecs <-
 # CXX.sys.ppm.p = the concentration of gas in the GGA + incubation bottle system at the PRIOR READING
 # CXX.sys.ppm = the concentration of gas in the GGA + incubation bottle system 
 # CXX.air.ppm = the concentration of gas in the GGA prior to connecting the incubation bottle  
-decomp.data <- read.csv(file.path(getwd(), "GGA_data.csv")) %>% 
+decomp.data <- read.csv(file.path(getwd(), "data", "GGA_data.csv")) %>% 
   select("Date", "Time", "Time.Point", "day", "ElapsedDays",
          "Bottle", "Treatment", "Depth", "Rep",
          "CO2.sys.ppm.p", "CH4.sys.ppm.p", 
