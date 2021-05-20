@@ -4,7 +4,7 @@
 # email: quentin.walker@noaa.gov, mctigue@utexas.edu
 #####
 
-##### Run this sript first #####
+##### Run this script first #####
 
 # this script reads in raw data from our decomposition/incubation experiment, ##### 
 # converts it to moles of gas and moles of carbon,
