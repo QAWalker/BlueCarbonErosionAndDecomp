@@ -1,3 +1,12 @@
+#####
+# N.D. McTigue, Q.A. Walker, and C.A. Currin 2021
+# Refining estimates of greenhouse gas emissions from salt marsh “blue carbon” erosion and decomposition
+# email: quentin.walker@noaa.gov, mctigue@utexas.edu
+#####
+
+## Run this sript sixth ##
+# This script creates a map plot of the results from "Calculate Nationwide Decomposition.R"
+
 # Plot a map of COOPS water temperature stations and the calculated annual loss of C at each ####
 # this creates a theme for the map
 theme_map <- function(...) {
