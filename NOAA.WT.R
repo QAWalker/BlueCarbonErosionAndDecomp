@@ -1,3 +1,9 @@
+#####
+# N.D. McTigue, Q.A. Walker, and C.A. Currin 2021
+# Refining estimates of greenhouse gas emissions from salt marsh “blue carbon” erosion and decomposition
+# email: quentin.walker@noaa.gov, mctigue@utexas.edu
+#####
+
 NOAA.WT <- function(begin_date, end_date, stationid, time_zone="gmt", units="metric", throttle = F){
   require(rnoaa)
   require(lubridate)

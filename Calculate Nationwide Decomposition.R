@@ -1,13 +1,25 @@
-##################
-# the start of this script is designed to be run without downloading the data
-require(tidyverse)
-require(lubridate)
-# make sure your working directory is the place where the data is stored
-getwd()
-# set the working directory to where you have the stations csv file saved 
-# setwd("C:/Users/Quentin.Walker/R/Projects/MarshSedDecomp")
+#####
+# N.D. McTigue, Q.A. Walker, and C.A. Currin 2021
+# Refining estimates of greenhouse gas emissions from salt marsh “blue carbon” erosion and decomposition
+# email: quentin.walker@noaa.gov, mctigue@utexas.edu
+#####
 
-# the start of this script is designed to be run without downloading the data
+## Run this sript fifth ##
+# *** this script is designed to be run with the water temperature data already downloaded ***
+# if you do not have the water temperature files saved run the "Download and save water temp data.R" script (warning that script takes a while to run)
+# .csv files for water temperature are also available for download from the github for this project
+# @ https://github.com/QAWalker/BlueCarbonErosionAndDecomp/tree/main/Water%20Temp%20Data
+
+# This script takes the downloaded data from NOAA CO-OPS water temperature stations and determines 
+# the amount of decomposition that would occur at each station in a year
+
+library(tidyverse)
+library(lubridate)
+
+# load in function to propogate error
+source(file.path(getwd(),"mutate_with_error.R"))
+
+#### Read in all the data ####
 # Load the station list
 idlist <- read.csv(paste0(getwd(), "/coops-activewatertempstations.csv"), stringsAsFactors = F) %>% 
   mutate(ObjName = gsub(" ", "",.$Name, fixed =T)) %>% 
@@ -155,38 +167,12 @@ gapdf.summary <- gapdf.melt %>%
 stationmetadata <- left_join(stationmetadata, gapdf.summary, by = c("ObjName" = "Name"))
 
 #### calculate the decomposition #####
-# this function is from https://www.r-bloggers.com/easy-error-propagation-in-r/
-# it allows error to be propagated through calculations 
-# error for each var is denoted by a 'd' preceding the variable name i.e. error for 'mean' is 'dmean'
-mutate_with_error = function(.data, f) {
-  exprs = list(
-    # expression to compute new variable values
-    deparse(f[[3]]),
-    
-    # expression to compute new variable errors
-    sapply(all.vars(f[[3]]), function(v) {
-      dfdp = deparse(D(f[[3]], v))
-      sprintf('(d%s*(%s))^2', v, dfdp)
-    }) %>%
-      paste(collapse='+') %>%
-      sprintf('sqrt(%s)', .)
-  )
-  names(exprs) = c(
-    deparse(f[[2]]),
-    sprintf('d%s', deparse(f[[2]]))
-  )
-  
-  .data %>%
-    # the standard evaluation alternative of mutate()
-    mutate_(.dots=exprs)
-}
-
-## constants calculated from experiments
-R <- .00831446 #kJ mol^-1 K^-1 (universal gas constant)
-K2 <- c(840.5/1000000, 1018/1000000) #mean mol C mol C^-1 d^-1 deep, shallow sediment respectively
-dK2 <- c(82.4/1000000, 166/1000000) #sd mol C mol C^-1 d^-1 deep, shallow sediment respectively
-K1 <- c(379.4/1000000, 518/1000000) #mean mol C mol C^-1 d^-1 deep, shallow sediment respectively
-dK1 <- c(92.3/1000000, 32.4/1000000) #sd mol C mol C^-1 d^-1 deep, shallow sediment respectively
+# constants calculated from experiments
+R <- .00831446 #kJ mol^-1 K^-1
+K2 <- c(finalRates$slope[finalRates$Treatment == "IB 30"]) #mol C mol C^-1 d^-1 #changes based on deep, shallow sediment
+K2.sd <- c(finalRates$sd[finalRates$Treatment == "IB 30"])
+K1 <- c(finalRates$slope[finalRates$Treatment == "IB 20"]) #mol C mol C^-1 d^-1 #changes based on deep, shallow sediment
+K1.sd <- c(finalRates$sd[finalRates$Treatment == "IB 20"])
 T2 <- 30 + 273.15 #Kelvin
 T1 <- 20 + 273.15 #Kelvin
 
@@ -251,10 +237,12 @@ stationmetadata <- stationmetadata %>%
                 pct = readings.pct, potentialreadings = potentialreadings))
 
 ######## Calculate sediment loss from erosion and the carbon decomposed because of that #######
-##### read in the Gittman 2015 marsh shoreline length data ####
+# read in the Gittman 2015 marsh shoreline length data
 shorelinelengths <- read.csv(paste0(getwd(), "/Gittman 2015.csv")) %>% 
   select('Region', "State" = 'Abb', "MarshShore" = "Marsh.shore..km.") 
 
+# See manuscript for details on why we use this estimate for Louisiana 
+# it is from the 2014 Louisiana Environmental Sensitivity Index (ESI) file (https://response.restoration.noaa.gov/esi_download#Louisiana), in particular, the ESIL layer (www.fisheries.noaa.gov/inport/item/53935).
 shorelinelengths$MarshShore[shorelinelengths$State=="LA"] = 66459
 shorelinelengths <- distinct(shorelinelengths)
 

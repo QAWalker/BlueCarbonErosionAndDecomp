@@ -26,23 +26,8 @@ TimeAtGivenPortion <- function(Portion, BeforeXY, AfterXY){
   return(Time) #return Time
 }
 
-## Traditional Q10 ####
-decompRate <- data.frame(Depth = NA, Treatment = NA, day = NA)
-
-for (d in unique(decomp.data$day)) {
-  decompRate <- filter(decomp.data, day <= d) %>% 
-    group_by(Depth, Treatment, Rep) %>% 
-    summarize(d = d, 
-              slope = summary(lm(PercentCRespired ~ day))$coefficients[2]) %>% 
-    rename(day = d) %>% 
-    ungroup() %>% 
-    bind_rows(decompRate, .) %>% 
-    filter(!is.na(Depth))
-}
-
-Q10 <- decompRate %>% 
-  group_by(day, Depth, Treatment) %>% 
-  summarise(slope = mean(slope, na.rm = T)) %>% 
+## 'Traditional' Q10 ####
+Q10 <- decompRate.summary %>% 
   dcast(day + Depth ~ Treatment) %>% 
   left_join(.,
             decompRate %>% 
@@ -59,7 +44,7 @@ Q10 <- decompRate %>%
   mutate(seQ10 = dQ10/sqrt(6)) %>% 
   select(day, Depth, dplyr::contains("Q"))
 
-# Plot Q10
+# Plot Q10 by day
 ggplot(Q10, aes(day, Q10, color = Depth))+
   geom_line()+
   geom_errorbar(aes(min = Q10 - seQ10, max = Q10 + seQ10))+
@@ -126,3 +111,11 @@ Q10q <- left_join(filter(ElapsedTime.summary, Treatment == "IB 20")[,c("PortionC
   mutate(N = N.30 + N.20,
          se = dQ10q / sqrt(N)) %>% 
   select("PortionC", "Depth", "Q10q", "sd" = "dQ10q", "N", "se")
+
+# Plot the Q10-q by portion respired
+filter(Q10q, PortionC<0.06) %>% 
+ggplot(aes(PortionC, Q10q, color = Depth))+
+  geom_line()+
+  geom_errorbar(aes(min = Q10q - se, max = Q10q + se))+
+  geom_point()+
+  theme_bw()

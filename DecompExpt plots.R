@@ -4,9 +4,10 @@
 # email: quentin.walker@noaa.gov, mctigue@utexas.edu
 #####
 
-## Run this sript after DecompExpt.R and Q10.R ##
+## Run this sript third ##
+# this script assumes that output from DecompExpt.R and Q10.R is in the global environment 
 
-# This script plots data from the decomp expt ##### 
+#### This script plots data from the decomp expt ##### 
 
 
 decomp.data <- decomp.data %>% 

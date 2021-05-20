@@ -1,13 +1,23 @@
-require(tidyverse)
-# set the working directoty to where you have the stations csv file saved 
-# this will also be where the station data gets saved
-# setwd("C:/Users/Quentin.Walker/R/MarshSedDecomp/")
+#####
+# N.D. McTigue, Q.A. Walker, and C.A. Currin 2021
+# Refining estimates of greenhouse gas emissions from salt marsh “blue carbon” erosion and decomposition
+# email: quentin.walker@noaa.gov, mctigue@utexas.edu
+#####
 
+## This script is optional to run ##
+
+# This script uses NOAA's API to download and save water temperature data from every active NOAA CO-OPS station
+# these files are available to download using a browser at 
+# https://github.com/QAWalker/BlueCarbonErosionAndDecomp/tree/main/Water%20Temp%20Data
+
+library(tidyverse)
+
+#### Download and save water temperature data from around the CONUS ####
 # read in function that calls the coops api to download the data
 source(paste0(getwd(), "/NOAA.WT.R"))
 
 # read a csv of the active stations. This will tell us which stations to download
-idlist <- read.csv(paste0(getwd(), "/coops-activewatertempstations.csv"), stringsAsFactors = F) %>% 
+idlist <- read.csv(file.path(getwd(), "coops-activewatertempstations.csv"), stringsAsFactors = F) %>% 
   mutate(ObjName = gsub(" ", "",.$Name, fixed =T)) %>% 
   mutate(ObjName = gsub(",", "",.$ObjName, fixed =T),
          ObjName = paste(ObjName, State, sep = ".")) %>% 
@@ -56,10 +66,13 @@ stationmetadata <- stationmetadata %>%
          lon = as.numeric(lon)) %>% 
   left_join(idlist, by = c("id" = "StationID", "name" = "Name"))
 
-# save each station as its own csv file
+## save each station as its own csv file ####
+# create a subdirectory to save the water temp data 
+dir.create(file.path(getwd(), "Water Temp Data")) #will throw a warning if directory already exists, but no error
+
 lapply(names(WTlist[which(!is.na(WTlist))]), function(nm) {
   write.csv(WTlist[[nm]],
-            paste0(getwd(),"/", nm, ".csv"),
+            paste0(getwd(),"/Water Temp Data/", nm, ".csv"),
             row.names = F)
 })
 
