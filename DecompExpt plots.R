@@ -4,7 +4,7 @@
 # email: quentin.walker@noaa.gov, mctigue@utexas.edu
 #####
 
-## Run this sript third ##
+## Run this script third ##
 # this script assumes that output from DecompExpt.R and Q10.R is in the global environment 
 
 #### This script plots data from the decomp expt ##### 

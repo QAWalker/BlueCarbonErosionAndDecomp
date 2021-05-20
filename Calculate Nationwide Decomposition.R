@@ -4,7 +4,7 @@
 # email: quentin.walker@noaa.gov, mctigue@utexas.edu
 #####
 
-## Run this sript fifth ##
+## Run this script fifth ##
 # *** this script is designed to be run with the water temperature data already downloaded ***
 # if you do not have the water temperature files saved run the "Download and save water temp data.R" script (warning that script takes a while to run)
 # .csv files for water temperature are also available for download from the github for this project
@@ -16,7 +16,7 @@
 library(tidyverse)
 library(lubridate)
 
-# load in function to propogate error
+# load in function to propagate error
 source(file.path(getwd(),"mutate_with_error.R"))
 
 #### Read in all the data ####
